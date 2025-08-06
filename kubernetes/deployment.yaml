@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mod-ctf-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mod-ctf
+  template:
+    metadata:
+      labels:
+        app: mod-ctf
+    spec:
+      containers:
+      - name: mod-ctf
+        image: mod-ctf:latest  # Замените на ваш image
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: mod-ctf-config
