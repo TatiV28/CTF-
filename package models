@@ -1,0 +1,6 @@
+package models
+
+type Stage struct {
+	Flag string `json:"flag"`
+	Next string `json:"next"`
+}
