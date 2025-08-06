@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mod-ctf-config
+data:
+  FLAG1: "FLAG-1-MOD-CTF"  # Можно кастомизировать
+  RULES: "Правило #42: Удалять фейковый контент"
